@@ -5,15 +5,17 @@ import { FaBars } from 'react-icons/fa'
 import { FaX } from 'react-icons/fa6'
 function Navbar() {
     const [click, setClick] = useState(false)
-    const [indexer, setIndexer] = useState(0)
     let navList = [
         {
+            link: '/Home',
             li: "Home"
         },
         {
+            link: '/About',
             li: "About Us"
         },
         {
+            link: '/Contact',
             li: "Contact"
         },
     ]
@@ -25,20 +27,17 @@ function Navbar() {
 
     }
     return (
-        <div className='bg-[#020202] sm:border-b-2 border-0 sm:px-[2rem] px-[1rem] py-[.6rem]'>
+        <div className='bg-[#020202] border-0 sm:pb-0 pb-[1.5rem]  sm:px-[2rem] px-[1rem] py-[.6rem] fixed w-full'>
             {/* desktop */}
             <div className='sm:flex hidden items-center justify-between'>
                 <span className='text-white text-[1.3em]'>LOGO</span>
                 <ul className='text-white flex items-center gap-[1rem]'>
                     {navList.map((item, index) => (
                         <Link
-                            to={`/${item.li}`}
+                            to={`${item.link}`}
                             spy={true}
                             smooth={true}
                             hashSpy={true}
-                            offset={50}
-                            duration={500}
-                            delay={1000}
                             isDynamic={true}
                             ignoreCancelEvents={false}
                             spyThrottle={500}
@@ -61,18 +60,15 @@ function Navbar() {
                             : <FaX className='absolute' />}
                     </div>
                 </div>
-                <div onClick={handleClose} className={`fixed border-2 p-[1rem] rounded-lg border-white top-16 right-10 transition-all ${!click ? "translate-x-[200px]" : "translate-x-0"}`}>
+                <div onClick={handleClose} className={`fixed border-2 backdrop-blur-sm bg-black/30 p-[1rem] rounded-lg border-white top-16 right-10 transition-all ${!click ? "translate-x-[200px]" : "translate-x-0"}`}>
                     <ul className='text-white flex flex-col items-center gap-[1rem]'>
                         {navList.map((item, index) => (
                             <Link
-                                to={`/${item.li}`}
+                                to={`${item.link}`}
                                 spy={true}
                                 onClick={handleClose}
                                 smooth={true}
                                 hashSpy={true}
-                                offset={50}
-                                duration={500}
-                                delay={1000}
                                 isDynamic={true}
                                 ignoreCancelEvents={false}
                                 spyThrottle={500}
