@@ -19,12 +19,12 @@ function App() {
         <Element name='/About'>
           <AboutUs id="/About" />
         </Element>
-        <Element name='/Fqas'>
+        <Element name='/Contact'>
           <Fqas id="/Fqas" />
         </Element>
       </main>
       <footer className='flex justify-center pb-[1rem] '>
-        <a href='https://www.facebook.com/messages/t/100007557528695' target='_blank'></a><Button value={'JOIN TODAY'} className={"text-[white] lg:text-[2rem] text-[1rem]"} />
+        <a href='https://www.facebook.com/messages/t/100007557528695' target='_blank'><Button value={'JOIN TODAY'} className={"text-[white] lg:text-[2rem] text-[1rem]"} /></a>
       </footer>
     </div>
   )
