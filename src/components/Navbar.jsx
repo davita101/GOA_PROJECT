@@ -27,7 +27,7 @@ function Navbar() {
 
     }
     return (
-        <div className='bg-[#020202] border-0 sm:pb-0 pb-[1.5rem]  sm:px-[2rem] px-[1rem] py-[.6rem] fixed w-full'>
+        <div className='bg-[#020202] border-0 z-[99]  sm:pb-0 pb-[1.5rem]  sm:px-[2rem] px-[1rem] py-[1rem] fixed w-full'>
             {/* desktop */}
             <div className='sm:flex hidden items-center justify-between'>
                 <span className='text-white text-[1.3em]'>LOGO</span>
@@ -47,7 +47,7 @@ function Navbar() {
                         </Link>
                     ))}
                 </ul>
-                <div className='text-white'>
+                <div className='text-white pb-[1rem]'>
                     <a href='https://www.facebook.com/messages/t/100007557528695' target='_blank' ><Button value={"Join"} /></a>
                 </div>
             </div>
@@ -78,7 +78,7 @@ function Navbar() {
                             </Link>
                         ))}
                     </ul>
-                    <div className='text-white mt-[1rem]'>
+                    <div className='text-white pb-[1rem]'>
                         <a href='https://www.facebook.com/messages/t/100007557528695' target='_blank' ><Button value={"Join"} /></a>
                     </div>
                 </div>
